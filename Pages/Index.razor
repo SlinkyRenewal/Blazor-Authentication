@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Authentication Blazor Demo</h1>
+
+<AuthorizeView>
+    <Authorized>
+        Welcome @context.User.Identity.Name
+    </Authorized>
+    <NotAuthorized>
+        You are not authorized. Go to <a href="/login">Login in</a>
+    </NotAuthorized>
+</AuthorizeView>
